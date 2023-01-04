@@ -5,7 +5,6 @@ let express = require('express'),
     bodyParser = require('body-parser'),
     mongoDb = require('./database/db')
 
-
 mongoose.Promise = global.Promise;
 mongoose.connect(mongoDb.db, {
     useNewUrlParser: true,
@@ -37,7 +36,7 @@ app.get('/', (req, res) => {
 app.use('/api', bookRoute);
 
 // PORT 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
     console.log('Listening on port ' + port)
